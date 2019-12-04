@@ -76,10 +76,21 @@
                                 </div>
 
                                 <th:block th:if="${!emprunt.isProlongation()}">
+                                    <th:block th:if="${1 == emprunt.getDateFin().compare(dateToDay)}">
                                     <td style="width: 30%">
                                         <p><a class="btn btn-outline-primary" href="#" th:href="@{/prolongation(empruntId=${emprunt.getId()})}">PROLONGER</a></p>
                                         <p>Attention vous pouvez polonger votre emprunt pour 4 semaines suplémentaire une seul fois !</p>
                                     </td>
+                                    </th:block>
+                                </th:block>
+
+                                <th:block th:if="${!emprunt.isProlongation()}">
+                                    <th:block th:if="${-1 == emprunt.getDateFin().compare(dateToDay)}">
+                                        <td style="width: 30%">
+                                            <p class="text-danger">Vous avez dépassé la date de fin d'emprunt, vous ne pouvez plus polonger votre emprunt pour 4 semaines suplémentaire !</p>
+                                            <p class="text-danger">Merci de retourner l'ouvrage au plus tôt !</p>
+                                        </td>
+                                    </th:block>
                                 </th:block>
 
                                 <th:block th:if="${statutCode == 'CONFLICT'}">

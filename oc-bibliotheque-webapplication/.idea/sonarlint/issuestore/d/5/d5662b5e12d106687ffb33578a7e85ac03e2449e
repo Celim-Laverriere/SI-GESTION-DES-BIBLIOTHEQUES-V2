@@ -1,0 +1,4 @@
+
+=squid:S2129"!Remove this "Integer" constructor(¿ƒëıÿÿÿÿ
+esquid:S2153"IRemove the boxing to "Integer"; The argument is already of the same type.(¿ƒëıÿÿÿÿ
+Tsquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ

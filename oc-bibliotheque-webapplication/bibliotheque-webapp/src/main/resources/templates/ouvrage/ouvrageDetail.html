@@ -46,10 +46,16 @@
                         <p th:text="'Genre : ' + ${ouvrageDetail.getGenre()}"></p>
                         <p th:text="'EAN : ' + ${ouvrageDetail.getRef()}"></p>
                         <hr/>
-                        <p>Pour cette ouvrage <span th:text="${#arrays.length(livreTypeListDispo)}"></span> livre(s) sont/est disponible(s)</p>
+                        <h3>Livre disponible en bibliotheque</h3>
+                        <p ></p>
+                        <p>Pour cette ouvrage <span th:text="${#arrays.length(livreTypeListDispo)} + '/'
+                        + ${(ouvrageDetail.getLivres().size())}"></span> livre(s) sont disponible(s)</p>
                         <th:block th:each="livre : ${livreTypeListDispo}">
                             <p th:text="'Référence du livre : ' + ${livre.getRefBibliotheque()}"></p>
                         </th:block>
+                        <hr/>
+                        <h3>Réservation</h3>
+                        <p></p>
                     </div>
                 </div>
             </div>

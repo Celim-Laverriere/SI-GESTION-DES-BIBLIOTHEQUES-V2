@@ -1,0 +1,4 @@
+
+®%squid:RedundantThrowsDeclarationCheck#"qRemove the declaration of thrown exception 'java.text.ParseException', as it cannot be thrown from method's body.(÷ÅŞşıÿÿÿÿ8¸˜Œí-
+dsquid:S4488!"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(àšıĞıÿÿÿÿ
+ksquid:S4488H"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ã’—Ëıÿÿÿÿ8×÷ÙŠí-
