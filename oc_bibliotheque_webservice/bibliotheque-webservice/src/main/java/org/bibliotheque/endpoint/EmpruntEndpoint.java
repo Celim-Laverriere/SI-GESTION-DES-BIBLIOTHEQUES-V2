@@ -37,7 +37,8 @@ public class EmpruntEndpoint  {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getEmpruntByIdRequest")
     @ResponsePayload
-    public GetEmpruntByIdResponse getEmpruntById(@RequestPayload GetEmpruntByIdRequest request) throws DatatypeConfigurationException {
+    public GetEmpruntByIdResponse getEmpruntById(
+            @RequestPayload GetEmpruntByIdRequest request) throws DatatypeConfigurationException {
         GetEmpruntByIdResponse response = new GetEmpruntByIdResponse();
         EmpruntEntity empruntEntity = service.getEmpruntById(request.getEmpruntId());
         EmpruntType empruntType = new EmpruntType();
@@ -106,7 +107,6 @@ public class EmpruntEndpoint  {
         GetAllEmpruntByCompteIdResponse response = new GetAllEmpruntByCompteIdResponse();
         List<EmpruntEntity> empruntEntityList = service.getAllEmpruntByCompteId(request.getId());
         List<EmpruntType> empruntTypeList = new ArrayList<>();
-
 
         for (EmpruntEntity entity : empruntEntityList){
             EmpruntType empruntType = new EmpruntType();
