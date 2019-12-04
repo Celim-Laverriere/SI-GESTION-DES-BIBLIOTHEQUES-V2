@@ -1,0 +1,5 @@
+
+squid:S3457I"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(çÒîã8Äôšàì-
+ksquid:S4488P"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(²æî¤úÿÿÿÿ8Äôšàì-
+ksquid:S44887"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¹é™Úıÿÿÿÿ8Äôšàì-
+dsquid:S4488 "HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¯â”üıÿÿÿÿ

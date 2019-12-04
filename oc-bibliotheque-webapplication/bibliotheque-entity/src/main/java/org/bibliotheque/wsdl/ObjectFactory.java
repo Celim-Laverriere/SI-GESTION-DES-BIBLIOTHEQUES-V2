@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.3.0 
 // Voir <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.06.20 à 12:07:28 PM CEST 
+// Généré le : 2019.12.03 à 02:14:41 PM CET 
 //
 
 
@@ -546,6 +546,46 @@ public class ObjectFactory {
      */
     public GetSearchByKeywordResponse createGetSearchByKeywordResponse() {
         return new GetSearchByKeywordResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetAllReservationRequest }
+     * 
+     */
+    public GetAllReservationRequest createGetAllReservationRequest() {
+        return new GetAllReservationRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetAllReservationResponse }
+     * 
+     */
+    public GetAllReservationResponse createGetAllReservationResponse() {
+        return new GetAllReservationResponse();
+    }
+
+    /**
+     * Create an instance of {@link ReservationType }
+     * 
+     */
+    public ReservationType createReservationType() {
+        return new ReservationType();
+    }
+
+    /**
+     * Create an instance of {@link GetListReservationByOuvrageIdRequest }
+     * 
+     */
+    public GetListReservationByOuvrageIdRequest createGetListReservationByOuvrageIdRequest() {
+        return new GetListReservationByOuvrageIdRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetListReservationByOuvrageIdResponse }
+     * 
+     */
+    public GetListReservationByOuvrageIdResponse createGetListReservationByOuvrageIdResponse() {
+        return new GetListReservationByOuvrageIdResponse();
     }
 
 }
