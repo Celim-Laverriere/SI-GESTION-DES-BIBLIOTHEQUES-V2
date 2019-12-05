@@ -29,3 +29,15 @@ Tbibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/OuvrageEndpoint
 Tbibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/EmpruntEndpoint.java,9\a\9a72af4513152cfa3be278ceecf734e886e7b8de
 L
 bibliotheque-service/pom.xml,c\1\c1969ec234bec2042cc521e5f15ed229328d33a6
+ƒ
+Sbibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/CompteEndpoint.java,1\3\1399cedeee0eac667a35228ec5c71d45b9fe71ef
+|
+Lbibliotheque-entity/src/main/java/org/bibliotheque/entity/OuvrageEntity.java,8\0\80e91e7de1ee57618a470924d2f3b37b9d1f1d30
+z
+Jbibliotheque-entity/src/main/java/org/bibliotheque/entity/LivreEntity.java,4\4\440faed43fd5a99d0409ac7fefacb12b89a27d38
+ˆ
+Xbibliotheque-service/src/main/java/org/bibliotheque/service/impl/OuvrageServiceImpl.java,f\1\f1acb361738ca7ab91e48823508cd151d9c25cd8
+ƒ
+Sbibliotheque-webservice/src/main/java/org/bibliotheque/BibliothequeApplication.java,0\7\0728700116728ef1c80151800f48402c30753978
+ˆ
+Xbibliotheque-repository/src/main/java/org/bibliotheque/repository/OuvrageRepository.java,c\6\c60366e82c6425f97a109faeecf540fabca07d4d

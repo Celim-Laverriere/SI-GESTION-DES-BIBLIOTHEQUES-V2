@@ -4,7 +4,6 @@ import org.bibliotheque.service.OuvrageService;
 import org.bibliotheque.service.ReservationService;
 import org.bibliotheque.wsdl.LivreType;
 import org.bibliotheque.wsdl.OuvrageType;
-import org.bibliotheque.wsdl.ReservationType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +12,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -25,9 +22,6 @@ public class OuvrageController {
     @Autowired
     private OuvrageService ouvrageService;
 
-    @Autowired
-    private ReservationService reservationService;
-
 
     @RequestMapping(value = "/ouvrages", method = RequestMethod.GET)
     public String ouvrages(final Model model){
@@ -35,18 +29,11 @@ public class OuvrageController {
         /**@see OuvrageService#ouvrageTypeList()*/
         List<OuvrageType> ouvrageTypeList = ouvrageService.ouvrageTypeList();
 
-        List<ReservationType> reservationTypeList = new ArrayList<>();
-
-        for (OuvrageType ouvrageType : ouvrageTypeList) {
-            reservationTypeList.addAll(reservationService.reservationTypeListByOuvrageId(ouvrageType.getId()));
-        }
-
         /**@see OuvrageService#livresDispoForOuvrage(List)*/
-        ouvrageTypeList = ouvrageService.livresDispoForOuvrage(ouvrageTypeList);
-
-        model.addAttribute("reservationList", reservationTypeList);
+        List<OuvrageType> ouvrageTypeListDisponible = ouvrageService.livresDispoForOuvrage(ouvrageService.ouvrageTypeList());
 
         model.addAttribute("ouvrageList", ouvrageTypeList);
+        model.addAttribute("ouvrageListDisponible", ouvrageTypeListDisponible);
 
             return "ouvrage/ouvrageList";
     }

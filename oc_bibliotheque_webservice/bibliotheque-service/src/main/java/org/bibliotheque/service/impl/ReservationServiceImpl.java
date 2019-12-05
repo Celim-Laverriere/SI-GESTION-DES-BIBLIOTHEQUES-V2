@@ -31,8 +31,19 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Override
     public List<ReservationEntity> getListReservationByOuvrageId(Integer ouvrageId) {
-        List<ReservationEntity> reservationEntityListByOuvrageId = new ArrayList<>();
-        this.reservationRepository.findAllById(ouvrageId).forEach(e -> reservationEntityListByOuvrageId.add((ReservationEntity) e));
-        return reservationEntityListByOuvrageId;
+        List<ReservationEntity> reservationEntities = new ArrayList<>();
+        this.reservationRepository.findAllByOuvrageId(ouvrageId).forEach(e -> reservationEntities.add(e));
+        return reservationEntities;
+    }
+
+    @Override
+    public boolean deleteReservaion(Integer id) {
+        try {
+            this.reservationRepository.deleteById(id);
+            return true;
+        } catch (Exception pEX) {
+            pEX.getMessage();
+            return false;
+        }
     }
 }

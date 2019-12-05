@@ -10,5 +10,7 @@ public interface ReservationService {
 
     List<ReservationEntity> getAllReservations();
 
-    List<ReservationEntity> getListReservationByOuvrageId( Integer ouvrageId);
+    List<ReservationEntity> getListReservationByOuvrageId(Integer ouvrageId);
+
+    boolean deleteReservaion(Integer id);
 }

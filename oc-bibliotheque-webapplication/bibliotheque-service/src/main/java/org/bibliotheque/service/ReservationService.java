@@ -11,9 +11,13 @@ import java.util.List;
 public class ReservationService {
 
     @Autowired
-    private ReservationRepositoy repositoy;
+    private ReservationRepositoy reservationRepositoy;
+
 
     public List<ReservationType> reservationTypeListByOuvrageId(Integer ouvrageId){
-        return repositoy.reservationTypeListByOuvrageId(ouvrageId);
+        return reservationRepositoy.reservationTypeListByOuvrageId(ouvrageId);
     }
+
+
+
 }

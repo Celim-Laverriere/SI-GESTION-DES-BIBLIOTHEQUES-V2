@@ -29,4 +29,8 @@ public class ReservationEntity implements Serializable {
     @Column(name = "compte_id")
     private Integer compteId;
 
+    @ManyToOne
+    @JoinColumn(name = "ouvrage_id", insertable = false, updatable = false)
+    private OuvrageEntity ouvrageReservation;
+
 }

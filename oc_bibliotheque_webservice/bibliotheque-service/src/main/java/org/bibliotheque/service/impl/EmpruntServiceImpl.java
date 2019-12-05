@@ -71,4 +71,11 @@ public class EmpruntServiceImpl implements EmpruntService {
         return empruntEntityList;
     }
 
+    @Override
+    public List<EmpruntEntity> getAllEmpruntByOuvrageId(Integer ouvrageId) {
+        List<EmpruntEntity> empruntEntityListByOuvrageId = new ArrayList<>();
+        this.repository.findAllEmpruntByOuvrageId(ouvrageId).forEach(e -> empruntEntityListByOuvrageId.add(e));
+        return empruntEntityListByOuvrageId;
+    }
+
 }

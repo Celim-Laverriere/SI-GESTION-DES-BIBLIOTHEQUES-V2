@@ -218,6 +218,7 @@
             <xs:element name="ref" type="xs:string"/>
             <xs:element name="photos" type="tns:photoType" maxOccurs="unbounded" minOccurs="0"/>
             <xs:element name="livres" type="tns:livreType" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element name="reservations" type="tns:reservationType" maxOccurs="unbounded" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -591,6 +592,22 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="reservationListByOuvrageId" type="tns:reservationType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ==== DELETE RESERVATION ==== -->
+    <xs:element name="deleteReservationRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="reservationId" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="deleteReservationResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

@@ -31,3 +31,11 @@ Xbibliotheque-webapp/src/main/java/org/bibliotheque/controller/ReservationContro
 Tbibliotheque-webapp/src/main/java/org/bibliotheque/controller/EmpruntController.java,0\4\040d8884c948ded127362345b040e92200fdd71d
 „
 Tbibliotheque-webapp/src/main/java/org/bibliotheque/controller/OuvrageController.java,4\2\42da77e2d440833740165f050444cf3b82e8e535
+x
+Hbibliotheque-entity/src/main/java/org/bibliotheque/wsdl/EmpruntType.java,1\0\1063b1fa09958c4eb055f59f2c17772206b54dbb
+~
+Nbibliotheque-batch/src/main/java/org/bibliotheque/batch/MailItemProcessor.java,9\7\97fd6d59edf033c764e9a8988f07e04f9905d6b2
+ƒ
+Sbibliotheque-webapp/src/main/java/org/bibliotheque/controller/CompteController.java,d\6\d6b93c86da912d40e2b7e83bda84b3578ddd5a60
+
+Obibliotheque-service/src/main/java/org/bibliotheque/service/OuvrageService.java,3\e\3edc3e946e2e10d1608c1ce21e06d041c75d3c74

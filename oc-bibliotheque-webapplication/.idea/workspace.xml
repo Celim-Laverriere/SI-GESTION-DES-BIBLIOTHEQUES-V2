@@ -29,6 +29,8 @@
       <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/bibliotheque-batch/bibliotheque-batch.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/bibliotheque-entity/bibliotheque-entity.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteReservationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteReservationResponse.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllReservationRequest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllReservationResponse.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/ReservationType.java" afterDir="false" />
@@ -37,8 +39,10 @@
       <change afterPath="$PROJECT_DIR$/bibliotheque-service/bibliotheque-service.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/ReservationService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/bibliotheque-webapp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/reservation/reservation.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs/log.log.2019-11-27.0.gz" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logs/log.log.2019-12-03.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/log.log.2019-12-04.0.gz" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/oc-bibliotheque-webapplication.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/compiler.xml" afterDir="false" />
@@ -110,6 +114,11 @@
       <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/libraries/Maven__wsdl4j_wsdl4j_1_6_3.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/0/7/0728700116728ef1c80151800f48402c30753978" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/4/4/440faed43fd5a99d0409ac7fefacb12b89a27d38" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/8/0/80e91e7de1ee57618a470924d2f3b37b9d1f1d30" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/c/6/c60366e82c6425f97a109faeecf540fabca07d4d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/sonarlint/issuestore/f/1/f1acb361738ca7ab91e48823508cd151d9c25cd8" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/ReservationEntity.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/ReservationEndpoint.java" afterDir="false" />
@@ -131,8 +140,8 @@
         <option value="AnnotationType" />
         <option value="JavaScript File" />
         <option value="spring-beans.schema" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -178,7 +187,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../PROJET 6 - CREEZ UN SITE COMMUNAUTAIRE AUTOUR DE L’ESCALADE/OC-PROJET-6-SITE-WEB-ESCALADE/oc_escalade_application" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -193,12 +202,8 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication\bibliotheque-webapp\src\main\resources\static\" />
-      <recent name="F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication\bibliotheque-webapp\src\main\resources\templates" />
-      <recent name="F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication\bibliotheque-webapp\src\main\resources" />
-      <recent name="F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication\bibliotheque-batch\src\main\resources" />
-      <recent name="F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication\bibliotheque-batch\src\main\java\org\bibliotheque\Mail" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.bibliotheque.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication\bibliotheque-webapp\src\main\resources\static\image" />
@@ -209,8 +214,12 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.bibliotheque" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="org.bibliotheque.config" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication\bibliotheque-webapp\src\main\resources\static\" />
+      <recent name="F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication\bibliotheque-webapp\src\main\resources\templates" />
+      <recent name="F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication\bibliotheque-webapp\src\main\resources" />
+      <recent name="F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication\bibliotheque-batch\src\main\resources" />
+      <recent name="F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication\bibliotheque-batch\src\main\java\org\bibliotheque\Mail" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -341,12 +350,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@71424bdd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@844f7a8b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@71424bdd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@252c418" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@844f7a8b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@51a81557" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -436,6 +445,9 @@
       <workItem from="1561012757212" duration="9657000" />
       <workItem from="1575366864683" duration="9674000" />
       <workItem from="1575443408364" duration="1893000" />
+      <workItem from="1575467326968" duration="6050000" />
+      <workItem from="1575532222678" duration="19364000" />
+      <workItem from="1575561635258" duration="12000" />
     </task>
     <servers />
   </component>

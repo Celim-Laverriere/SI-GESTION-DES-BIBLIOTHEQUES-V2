@@ -1,2 +1,4 @@
 
 Jsquid:S1612",Replace this lambda with a method reference.(ŠæÖİ8­”êÚì-
+Tsquid:S3655"7Call "Optional#isPresent()" before accessing the value.(ÌÈ 8’»—ªí-
+Isquid:S1612#",Replace this lambda with a method reference.(Ô8Ï¢î³í-

@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.3.0 
 // Voir <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.12.03 à 02:14:41 PM CET 
+// Généré le : 2019.12.05 à 11:02:29 AM CET 
 //
 
 
@@ -27,11 +27,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
- *         &lt;element name="dateDebut" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
- *         &lt;element name="dateFin" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
- *         &lt;element name="ouvrageId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="dateDemandeDeResa" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
  *         &lt;element name="numPositionResa" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
- *         &lt;element name="livreId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="ouvrageId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="compteId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -44,11 +42,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "reservationType", propOrder = {
     "id",
-    "dateDebut",
-    "dateFin",
-    "ouvrageId",
+    "dateDemandeDeResa",
     "numPositionResa",
-    "livreId",
+    "ouvrageId",
     "compteId"
 })
 public class ReservationType {
@@ -56,13 +52,9 @@ public class ReservationType {
     protected int id;
     @XmlElement(required = true)
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar dateDebut;
-    @XmlElement(required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar dateFin;
-    protected int ouvrageId;
+    protected XMLGregorianCalendar dateDemandeDeResa;
     protected int numPositionResa;
-    protected int livreId;
+    protected int ouvrageId;
     protected int compteId;
 
     /**
@@ -82,67 +74,27 @@ public class ReservationType {
     }
 
     /**
-     * Obtient la valeur de la propriété dateDebut.
+     * Obtient la valeur de la propriété dateDemandeDeResa.
      * 
      * @return
      *     possible object is
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar getDateDebut() {
-        return dateDebut;
+    public XMLGregorianCalendar getDateDemandeDeResa() {
+        return dateDemandeDeResa;
     }
 
     /**
-     * Définit la valeur de la propriété dateDebut.
+     * Définit la valeur de la propriété dateDemandeDeResa.
      * 
      * @param value
      *     allowed object is
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setDateDebut(XMLGregorianCalendar value) {
-        this.dateDebut = value;
-    }
-
-    /**
-     * Obtient la valeur de la propriété dateFin.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getDateFin() {
-        return dateFin;
-    }
-
-    /**
-     * Définit la valeur de la propriété dateFin.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setDateFin(XMLGregorianCalendar value) {
-        this.dateFin = value;
-    }
-
-    /**
-     * Obtient la valeur de la propriété ouvrageId.
-     * 
-     */
-    public int getOuvrageId() {
-        return ouvrageId;
-    }
-
-    /**
-     * Définit la valeur de la propriété ouvrageId.
-     * 
-     */
-    public void setOuvrageId(int value) {
-        this.ouvrageId = value;
+    public void setDateDemandeDeResa(XMLGregorianCalendar value) {
+        this.dateDemandeDeResa = value;
     }
 
     /**
@@ -162,19 +114,19 @@ public class ReservationType {
     }
 
     /**
-     * Obtient la valeur de la propriété livreId.
+     * Obtient la valeur de la propriété ouvrageId.
      * 
      */
-    public int getLivreId() {
-        return livreId;
+    public int getOuvrageId() {
+        return ouvrageId;
     }
 
     /**
-     * Définit la valeur de la propriété livreId.
+     * Définit la valeur de la propriété ouvrageId.
      * 
      */
-    public void setLivreId(int value) {
-        this.livreId = value;
+    public void setOuvrageId(int value) {
+        this.ouvrageId = value;
     }
 
     /**

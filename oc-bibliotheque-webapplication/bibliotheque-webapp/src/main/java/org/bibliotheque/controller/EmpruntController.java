@@ -14,8 +14,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.HttpSession;
 import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 @Controller
@@ -28,7 +32,14 @@ public class EmpruntController {
     @Secured(value = "ROLE_USER")
     @RequestMapping(value = "/emprunt", method = RequestMethod.GET)
     public String getAllEmpruntByCompteId(HttpSession session, Model model, @RequestParam(name = "statutCode",
-                                            required = false) String statutCode){
+                                            required = false) String statutCode) throws ParseException, DatatypeConfigurationException {
+
+        // Génération de la date du jour
+        Date toDay = new Date();
+        // Formatage de la date du jour au format Gregorian
+        GregorianCalendar calendar = new GregorianCalendar();
+        calendar.setTime(toDay);
+        XMLGregorianCalendar dateToDay = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
 
         Users user = (Users) session.getAttribute("user");
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -36,6 +47,7 @@ public class EmpruntController {
 
         /**@see EmpruntService#getAllEmpruntByCompteId(Integer)*/
         List<EmpruntType> empruntTypeList = empruntService.getAllEmpruntByCompteId(user.getUserId());
+
 
         /**@see EmpruntService#livreTypeListEmprunter(List)*/
         List<LivreType> livreTypeList = empruntService.livreTypeListEmprunter(empruntTypeList);
@@ -50,6 +62,7 @@ public class EmpruntController {
         model.addAttribute("empruntTypeList", empruntTypeList);
         model.addAttribute("livreTypeList", livreTypeList);
         model.addAttribute("ouvrageTypeList", ouvrageTypeList);
+        model.addAttribute("dateToDay", dateToDay);
 
         return "compte/emprunt";
     }

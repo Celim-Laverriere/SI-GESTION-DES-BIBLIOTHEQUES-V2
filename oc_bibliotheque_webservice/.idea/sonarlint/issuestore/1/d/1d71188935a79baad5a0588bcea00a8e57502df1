@@ -1,6 +1,8 @@
 
-?squid:S11482"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
-?squid:S1148'"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
+Jsquid:S1612M",Replace this lambda with a method reference.(÷Š¨˜8ìı­µí-
+Hsquid:S1612",Replace this lambda with a method reference.(¨ãØ¼ûÿÿÿÿ
 Csquid:S1612F",Replace this lambda with a method reference.(ÉşşÏ
 ?squid:S1148="#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
-Hsquid:S1612",Replace this lambda with a method reference.(¨ãØ¼ûÿÿÿÿ
+?squid:S1148'"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
+?squid:S11482"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
+Usquid:S3655"7Call "Optional#isPresent()" before accessing the value.(‡£Œ8—İ™ªí-
