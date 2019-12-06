@@ -80,12 +80,7 @@ public class ReservationEndpoint {
             @RequestPayload GetListReservationByOuvrageIdRequest request) throws DatatypeConfigurationException {
         GetListReservationByOuvrageIdResponse response = new GetListReservationByOuvrageIdResponse();
         List<ReservationEntity> reservationEntityList = service.getListReservationByOuvrageId(request.getOuvrageId());
-        //Test -----------------------------
-        List<EmpruntEntity> empruntEntityList = empruntService.getAllEmpruntByOuvrageId(request.getOuvrageId());
-        for (EmpruntEntity empruntEntity : empruntEntityList) {
-            System.out.println(empruntEntity.getLivreId());
-        }
-        //-------------------------------------
+
         List<ReservationType> reservationTypeList = new ArrayList<>();
 
         for (ReservationEntity entity : reservationEntityList) {

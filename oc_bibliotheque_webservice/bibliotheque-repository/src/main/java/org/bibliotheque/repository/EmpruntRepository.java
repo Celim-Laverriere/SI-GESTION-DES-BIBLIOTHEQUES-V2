@@ -12,10 +12,6 @@ public interface EmpruntRepository extends CrudRepository<EmpruntEntity, Integer
 
    List<EmpruntEntity> findAllByCompteId(Integer compte_id);
 
-
-   @Query("SELECT DISTINCT emprunt FROM public.emprunt " +
-           "INNER JOIN livre ON emprunt.livre_id = livre.id " +
-           "WHERE emprunt.livre_id = livre.id " +
-           "AND livre.ouvrage_id = 1")
-   List<EmpruntEntity> findAllEmpruntByOuvrageId(@Param("x") Integer ouvrage_id);
+   @Query("SELECT o FROM EmpruntEntity o WHERE livre_id = :x")
+   List<EmpruntEntity> findAllEmpruntByOuvrageId(@Param("x") Integer livre_id);
 }

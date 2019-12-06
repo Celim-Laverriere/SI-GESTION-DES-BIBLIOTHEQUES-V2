@@ -25,6 +25,17 @@ public class EmpruntRepository {
 
 
     /**
+     * ==== CETTE METHODE RECUPERE TOUS LES EMPRUNTS LIE à UN OUVRAGE ====
+     * @param ouvrageId
+     * @return
+     */
+    public List<EmpruntType> getAllEmpruntByOuvrageId(Integer ouvrageId) {
+        GetAllEmpruntByOuvrageIdResponse response = empruntClient.getAllEmpruntByOuvrageId(ouvrageId);
+        return response.getEmpruntType();
+    }
+
+
+    /**
      * ==== CETTE METHODE RECUPERER TOUS LES EMPRUNTS D'UN CLIENT ====
      * @param id
      * @return UNE LISTE DES EMPRUNTS D'UN COMPTE

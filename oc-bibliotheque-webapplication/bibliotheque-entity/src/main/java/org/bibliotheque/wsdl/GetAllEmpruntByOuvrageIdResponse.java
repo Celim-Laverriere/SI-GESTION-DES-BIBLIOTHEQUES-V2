@@ -8,9 +8,10 @@
 
 package org.bibliotheque.wsdl;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -25,7 +26,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="empruntType" type="{http://www.webservice.org/bibliotheque-ws}empruntType"/&gt;
+ *         &lt;element name="empruntType" type="{http://www.webservice.org/bibliotheque-ws}empruntType" maxOccurs="unbounded" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -38,34 +39,38 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "empruntType"
 })
-@XmlRootElement(name = "addEmpruntRequest")
-public class AddEmpruntRequest {
+@XmlRootElement(name = "getAllEmpruntByOuvrageIdResponse")
+public class GetAllEmpruntByOuvrageIdResponse {
 
-    @XmlElement(required = true)
-    protected EmpruntType empruntType;
-
-    /**
-     * Obtient la valeur de la propriété empruntType.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmpruntType }
-     *     
-     */
-    public EmpruntType getEmpruntType() {
-        return empruntType;
-    }
+    protected List<EmpruntType> empruntType;
 
     /**
-     * Définit la valeur de la propriété empruntType.
+     * Gets the value of the empruntType property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link EmpruntType }
-     *     
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the empruntType property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getEmpruntType().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link EmpruntType }
+     * 
+     * 
      */
-    public void setEmpruntType(EmpruntType value) {
-        this.empruntType = value;
+    public List<EmpruntType> getEmpruntType() {
+        if (empruntType == null) {
+            empruntType = new ArrayList<EmpruntType>();
+        }
+        return this.empruntType;
     }
 
 }

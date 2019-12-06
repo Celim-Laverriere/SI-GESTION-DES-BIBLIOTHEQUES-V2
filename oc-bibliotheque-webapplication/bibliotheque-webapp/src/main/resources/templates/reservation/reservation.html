@@ -26,20 +26,24 @@
 
                     <table class="table table-hover table-striped col col-md-9">
                         <thead class="bg-success">
-                        <tr>
+                        <tr style="text-align: center">
                             <th scope="col">#</th>
                             <th scope="col">Ouvrage</th>
-                            <th scope="col">Date</th>
+                            <th scope="col">Date resa</th>
+                            <th scope="col">Date de retour estimé</th>
+                            <th scope="col">Décompte des jours</th>
                             <th scope="col">Compte</th>
                         </tr>
                         </thead>
 
                         <tbody>
                         <th:block th:each="reservation : ${reservationList}">
-                        <tr>
+                        <tr style="text-align: center">
                             <th th:text="${reservation.getNumPositionResa()}" scope="row"></th>
                             <td th:text="${reservation.getOuvrageId()}"></td>
-                            <td th:text="${reservation.getDateDemandeDeResa()}"></td>
+                            <td th:text="${dateFormat.format(dateFormat.parse(reservation.getDateDemandeDeResa().toString()))}"></td>
+                            <td th:text="${dateFormat.format(dateFormat.parse(dateRetour.toString()))}"></td>
+                            <td th:text="${compteurJour}"></td>
                             <td th:text="${reservation.getCompteId()}"></td>
 
                         </tr>

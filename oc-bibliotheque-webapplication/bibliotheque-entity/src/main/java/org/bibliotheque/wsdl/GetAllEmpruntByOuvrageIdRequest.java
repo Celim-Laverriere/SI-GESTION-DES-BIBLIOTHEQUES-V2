@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="compteId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="ouvrageId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,27 +35,27 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "compteId"
+    "ouvrageId"
 })
-@XmlRootElement(name = "deleteCompteRequest")
-public class DeleteCompteRequest {
+@XmlRootElement(name = "getAllEmpruntByOuvrageIdRequest")
+public class GetAllEmpruntByOuvrageIdRequest {
 
-    protected int compteId;
+    protected int ouvrageId;
 
     /**
-     * Obtient la valeur de la propriété compteId.
+     * Obtient la valeur de la propriété ouvrageId.
      * 
      */
-    public int getCompteId() {
-        return compteId;
+    public int getOuvrageId() {
+        return ouvrageId;
     }
 
     /**
-     * Définit la valeur de la propriété compteId.
+     * Définit la valeur de la propriété ouvrageId.
      * 
      */
-    public void setCompteId(int value) {
-        this.compteId = value;
+    public void setOuvrageId(int value) {
+        this.ouvrageId = value;
     }
 
 }

@@ -5,7 +5,7 @@
 Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.3.0 
 Voir <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-Généré le : 2019.12.05 à 11:02:29 AM CET 
+Généré le : 2019.12.06 à 09:56:50 AM CET 
 
   -->
   <bindings xmlns:tns="http://www.webservice.org/bibliotheque-ws" if-exists="true" scd="x-schema::tns">
@@ -185,6 +185,12 @@ Généré le : 2019.12.05 à 11:02:29 AM CET
     </bindings>
     <bindings if-exists="true" scd="tns:deleteEmpruntResponse">
       <class ref="org.bibliotheque.wsdl.DeleteEmpruntResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllEmpruntByOuvrageIdRequest">
+      <class ref="org.bibliotheque.wsdl.GetAllEmpruntByOuvrageIdRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllEmpruntByOuvrageIdResponse">
+      <class ref="org.bibliotheque.wsdl.GetAllEmpruntByOuvrageIdResponse"/>
     </bindings>
     <bindings if-exists="true" scd="tns:loginRequest">
       <class ref="org.bibliotheque.wsdl.LoginRequest"/>

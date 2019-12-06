@@ -29,6 +29,24 @@ public class EmpruntClient extends WebServiceGatewaySupport {
     }
 
     /**
+     *  ==== CETTE METHODE RECUPERE TOUS LES EMPRUNTS LIE à UN OUVRAGE ====
+     * @param ouvrageId
+     * @return
+     */
+    public GetAllEmpruntByOuvrageIdResponse getAllEmpruntByOuvrageId(Integer ouvrageId) {
+        GetAllEmpruntByOuvrageIdResponse response = new GetAllEmpruntByOuvrageIdResponse();
+
+        try {
+            GetAllEmpruntByOuvrageIdRequest request = new GetAllEmpruntByOuvrageIdRequest();
+            request.setOuvrageId(ouvrageId);
+            response = (GetAllEmpruntByOuvrageIdResponse) getWebServiceTemplate().marshalSendAndReceive(request);
+        } catch (SoapFaultClientException pEX) {
+            logger.error("Methode GetAllEmpruntByOuvrageIdResponse : {}", pEX.toString());
+        }
+        return response;
+    }
+
+    /**
      * ==== CETTE METHODE RECUPERER TOUS LES EMPRUNTS D'UN CLIENT ====
      * @param id
      * @return UNE LISTE DES EMPRUNTS D'UN COMPTE
@@ -93,4 +111,5 @@ public class EmpruntClient extends WebServiceGatewaySupport {
 
         return response;
     }
+
 }
