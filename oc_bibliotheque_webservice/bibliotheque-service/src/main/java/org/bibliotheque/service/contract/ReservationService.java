@@ -12,5 +12,7 @@ public interface ReservationService {
 
     List<ReservationEntity> getListReservationByOuvrageId(Integer ouvrageId);
 
+    List<ReservationEntity> getListReservationByCompteId(Integer compteId);
+
     boolean deleteReservaion(Integer id);
 }

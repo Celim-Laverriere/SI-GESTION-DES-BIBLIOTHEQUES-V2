@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.3.0 
 // Voir <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.12.06 à 09:56:51 AM CET 
+// Généré le : 2019.12.09 à 09:37:56 AM CET 
 //
 
 
@@ -602,6 +602,22 @@ public class ObjectFactory {
      */
     public GetListReservationByOuvrageIdResponse createGetListReservationByOuvrageIdResponse() {
         return new GetListReservationByOuvrageIdResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetListReservationByCompteIdRequest }
+     * 
+     */
+    public GetListReservationByCompteIdRequest createGetListReservationByCompteIdRequest() {
+        return new GetListReservationByCompteIdRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetListReservationByCompteIdResponse }
+     * 
+     */
+    public GetListReservationByCompteIdResponse createGetListReservationByCompteIdResponse() {
+        return new GetListReservationByCompteIdResponse();
     }
 
     /**

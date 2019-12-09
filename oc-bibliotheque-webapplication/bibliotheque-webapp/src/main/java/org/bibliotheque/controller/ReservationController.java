@@ -1,5 +1,6 @@
 package org.bibliotheque.controller;
 
+import org.bibliotheque.security.entity.Users;
 import org.bibliotheque.service.EmpruntService;
 import org.bibliotheque.service.OuvrageService;
 import org.bibliotheque.service.ReservationService;
@@ -11,9 +12,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.servlet.http.HttpSession;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.List;
+import java.util.*;
 
 @Controller
 public class ReservationController {
@@ -49,5 +52,54 @@ public class ReservationController {
         model.addAttribute("compteurJour", jourRestantEmprunt.get(0));
 
         return "reservation/reservation";
+    }
+
+
+    @GetMapping(value = "/mesReservations")
+    public String mesReservations(HttpSession session, Model model) throws ParseException {
+
+        Users user = (Users) session.getAttribute("user");
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        model.addAttribute("dateFormat", dateFormat);
+
+        List<ReservationType> reservationTypeList = reservationService.reservationTypeListByCompteId(user.getUserId());
+
+        Map<Integer, Long> jourRestantEmprunt = new HashMap<>();
+        Map<Integer, EmpruntType> dateRetour = new HashMap<>();
+
+        for (ReservationType reservationType : reservationTypeList) {
+            List<EmpruntType> empruntTypeList = empruntService.getAllEmpruntByOuvrageId(reservationType.getOuvrageId());
+            List<Long> jourRestantEmpruntList = empruntService.remainingDayOfTheLoan(empruntTypeList);
+
+            jourRestantEmprunt.put(reservationType.getOuvrageId(), jourRestantEmpruntList.get(0));
+
+            empruntTypeList = empruntService.earliestReturnDateForLoan(empruntTypeList, jourRestantEmpruntList);
+            dateRetour.put(reservationType.getOuvrageId(), empruntTypeList.get(0));
+        }
+
+        List<OuvrageType> ouvrageTypeList = ouvrageService.ouvrageTypeList();
+
+        model.addAttribute("dateRetour", dateRetour);
+        model.addAttribute("jourRestantEmprunt", jourRestantEmprunt);
+        model.addAttribute("reservationTypeList", reservationTypeList);
+        model.addAttribute("ouvrageTypeList", ouvrageTypeList);
+
+        return "compte/resaCompte";
+    }
+
+    @GetMapping(value = "detailReservation")
+    public String deailReservation(Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId) {
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        model.addAttribute("dateFormat", dateFormat);
+
+        OuvrageType ouvrageType = ouvrageService.ouvrageById(ouvrageId);
+
+        model.addAttribute("ouvrageType", ouvrageType);
+
+        System.out.println(ouvrageId);
+
+        return "compte/resaDetailCompte";
     }
 }

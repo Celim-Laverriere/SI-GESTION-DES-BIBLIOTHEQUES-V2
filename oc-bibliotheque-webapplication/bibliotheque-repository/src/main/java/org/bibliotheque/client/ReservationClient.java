@@ -11,6 +11,11 @@ public class ReservationClient extends WebServiceGatewaySupport {
 
     private static final Logger logger = (Logger) LoggerFactory.getLogger(ReservationClient.class);
 
+    /**
+     *
+     * @param ouvrage_id
+     * @return
+     */
     public GetListReservationByOuvrageIdResponse getListReservationByOuvrageId (Integer ouvrage_id){
 
         GetListReservationByOuvrageIdResponse response = new GetListReservationByOuvrageIdResponse();
@@ -23,6 +28,27 @@ public class ReservationClient extends WebServiceGatewaySupport {
 
         } catch (SoapFaultClientException pEX) {
             logger.error("GetListReservationByOuvrageIdResponse : {}", pEX.getMessage());
+        }
+
+        return response;
+    }
+
+
+    /**
+     *
+     * @param compteId
+     * @return
+     */
+    public GetListReservationByCompteIdResponse getListReservationByCompteId (Integer compteId) {
+
+        GetListReservationByCompteIdResponse response = new GetListReservationByCompteIdResponse();
+
+        try {
+            GetListReservationByCompteIdRequest request = new GetListReservationByCompteIdRequest();
+            request.setCompteId(compteId);
+            response = (GetListReservationByCompteIdResponse) getWebServiceTemplate().marshalSendAndReceive(request);
+        } catch (SoapFaultClientException pEX) {
+            logger.error("GetListReservationByCompteIdResponse : {}", pEX.getMessage());
         }
 
         return response;

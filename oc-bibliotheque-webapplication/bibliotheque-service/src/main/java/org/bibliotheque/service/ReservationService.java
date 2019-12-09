@@ -13,11 +13,22 @@ public class ReservationService {
     @Autowired
     private ReservationRepositoy reservationRepositoy;
 
-
+    /**
+     *
+     * @param ouvrageId
+     * @return
+     */
     public List<ReservationType> reservationTypeListByOuvrageId(Integer ouvrageId){
         return reservationRepositoy.reservationTypeListByOuvrageId(ouvrageId);
     }
 
-
+    /**
+     *
+     * @param compteId
+     * @return
+     */
+    public List<ReservationType> reservationTypeListByCompteId(Integer compteId){
+        return reservationRepositoy.reservationTypeListByCompteId(compteId);
+    }
 
 }

@@ -39,3 +39,5 @@ Nbibliotheque-batch/src/main/java/org/bibliotheque/batch/MailItemProcessor.java
 Sbibliotheque-webapp/src/main/java/org/bibliotheque/controller/CompteController.java,d\6\d6b93c86da912d40e2b7e83bda84b3578ddd5a60
 
 Obibliotheque-service/src/main/java/org/bibliotheque/service/OuvrageService.java,3\e\3edc3e946e2e10d1608c1ce21e06d041c75d3c74
+
+Obibliotheque-service/src/main/java/org/bibliotheque/service/EmpruntService.java,4\8\480d730ab9003128b68c25efef85d065ce9326ac

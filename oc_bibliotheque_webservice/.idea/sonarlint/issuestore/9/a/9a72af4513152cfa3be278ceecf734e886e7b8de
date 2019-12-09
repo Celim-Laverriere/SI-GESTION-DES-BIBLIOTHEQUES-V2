@@ -1,5 +1,5 @@
 
-©%squid:RedundantThrowsDeclarationCheckj"qRemove the declaration of thrown exception 'java.text.ParseException', as it cannot be thrown from method's body.(†‚µά8Ξ•΅έμ-
-Asquid:S1125Κ")Remove the literal "false" boolean value.(ϋΕ
-Asquid:S1125ε")Remove the literal "false" boolean value.(ϋΕ
 `squid:S1192"HDefine a constant instead of duplicating this literal "SUCCESS" 3 times.(Γέ—σ
+Asquid:S1125Κ")Remove the literal "false" boolean value.(ϋΕ
+©%squid:RedundantThrowsDeclarationCheckj"qRemove the declaration of thrown exception 'java.text.ParseException', as it cannot be thrown from method's body.(†‚µά8Ξ•΅έμ-
+Asquid:S1125ε")Remove the literal "false" boolean value.(ϋΕ

@@ -10,4 +10,6 @@ public interface ReservationRepository extends CrudRepository<ReservationEntity,
 
 
     List<ReservationEntity> findAllByOuvrageId(Integer ouvrageId);
+
+    List<ReservationEntity> findAllByCompteId(Integer compteId);
 }

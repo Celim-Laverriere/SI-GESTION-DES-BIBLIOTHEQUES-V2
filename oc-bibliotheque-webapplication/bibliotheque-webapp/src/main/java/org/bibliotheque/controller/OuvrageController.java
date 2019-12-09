@@ -71,9 +71,10 @@ public class OuvrageController {
         List<OuvrageType> ouvrageTypeList = ouvrageService.ouvragesByGenreList(motCle);
 
         /**@see OuvrageService#livresDispoForOuvrage(List)*/
-        ouvrageTypeList = ouvrageService.livresDispoForOuvrage(ouvrageTypeList);
+        List<OuvrageType> ouvrageTypeListDisponible = ouvrageService.livresDispoForOuvrage(ouvrageService.ouvragesByGenreList(motCle));
 
         model.addAttribute("ouvrageList", ouvrageTypeList);
+        model.addAttribute("ouvrageListDisponible", ouvrageTypeListDisponible);
 
         return "ouvrage/ouvrageList";
     }

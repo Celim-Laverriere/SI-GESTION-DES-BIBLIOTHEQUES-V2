@@ -10,7 +10,6 @@ package org.bibliotheque.wsdl;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -25,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="serviceStatus" type="{http://www.webservice.org/bibliotheque-ws}serviceStatus"/&gt;
+ *         &lt;element name="compteId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,36 +35,27 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "serviceStatus"
+    "compteId"
 })
-@XmlRootElement(name = "updateLivreResponse")
-public class UpdateLivreResponse {
+@XmlRootElement(name = "getListReservationByCompteIdRequest")
+public class GetListReservationByCompteIdRequest {
 
-    @XmlElement(required = true)
-    protected ServiceStatus serviceStatus;
+    protected int compteId;
 
     /**
-     * Obtient la valeur de la propriété serviceStatus.
+     * Obtient la valeur de la propriété compteId.
      * 
-     * @return
-     *     possible object is
-     *     {@link ServiceStatus }
-     *     
      */
-    public ServiceStatus getServiceStatus() {
-        return serviceStatus;
+    public int getCompteId() {
+        return compteId;
     }
 
     /**
-     * Définit la valeur de la propriété serviceStatus.
+     * Définit la valeur de la propriété compteId.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link ServiceStatus }
-     *     
      */
-    public void setServiceStatus(ServiceStatus value) {
-        this.serviceStatus = value;
+    public void setCompteId(int value) {
+        this.compteId = value;
     }
 
 }

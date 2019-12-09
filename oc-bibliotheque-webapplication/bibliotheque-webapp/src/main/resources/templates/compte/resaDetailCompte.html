@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html   xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="layout"
+        lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <title>reservation</title>
+</head>
+<body>
+
+<div layout:fragment = "content">
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div th:replace="/fragments/menuCompte :: menuCompte"></div>
+
+            <div class="col col-md-10 ouvrageList">
+
+                <h3 class="styleTitre" style="color: #28a745" th:text="'DETAIL RESERVATION : ' + ${ouvrageType.getTitre()}"> </h3>
+                <hr/>
+                <div class="row justify-content-start" style="margin-left: 15%">
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

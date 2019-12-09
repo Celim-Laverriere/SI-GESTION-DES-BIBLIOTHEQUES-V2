@@ -46,4 +46,11 @@ public class ReservationServiceImpl implements ReservationService {
             return false;
         }
     }
+
+    @Override
+    public List<ReservationEntity> getListReservationByCompteId(Integer compteId) {
+        List<ReservationEntity> reservationEntities = new ArrayList<>();
+        this.reservationRepository.findAllByCompteId(compteId).forEach(e -> reservationEntities.add(e));
+        return reservationEntities;
+    }
 }

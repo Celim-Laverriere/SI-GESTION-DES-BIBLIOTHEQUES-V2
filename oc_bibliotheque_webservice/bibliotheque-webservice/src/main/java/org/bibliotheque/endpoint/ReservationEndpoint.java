@@ -2,7 +2,6 @@ package org.bibliotheque.endpoint;
 
 import com.bibliotheque.gs_ws.*;
 import lombok.NoArgsConstructor;
-import org.bibliotheque.entity.EmpruntEntity;
 import org.bibliotheque.entity.ReservationEntity;
 import org.bibliotheque.service.contract.EmpruntService;
 import org.bibliotheque.service.contract.ReservationService;
@@ -100,6 +99,34 @@ public class ReservationEndpoint {
         }
 
         response.getReservationListByOuvrageId().addAll(reservationTypeList);
+        return response;
+    }
+
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getListReservationByCompteIdRequest")
+    @ResponsePayload
+    public GetListReservationByCompteIdResponse getListReservationByCompteId(
+            @RequestPayload GetListReservationByCompteIdRequest request) throws DatatypeConfigurationException {
+        GetListReservationByCompteIdResponse response = new GetListReservationByCompteIdResponse();
+        List<ReservationEntity> reservationEntityList = service.getListReservationByCompteId(request.getCompteId());
+        List<ReservationType> reservationTypeList = new ArrayList<>();
+
+        for (ReservationEntity entity : reservationEntityList) {
+            ReservationType reservationType = new ReservationType();
+            GregorianCalendar calendar = new GregorianCalendar();
+
+            calendar.setTime(entity.getDateDemandeDeResa());
+            XMLGregorianCalendar dateDemandeDeResa = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+
+            reservationType.setId(entity.getId());
+            reservationType.setDateDemandeDeResa(dateDemandeDeResa);
+            reservationType.setOuvrageId(entity.getOuvrageId());
+            reservationType.setNumPositionResa(entity.getNumPositionResa());
+            reservationType.setCompteId(entity.getCompteId());
+
+            reservationTypeList.add(reservationType);
+        }
+
+        response.getReservationListByCompteId().addAll(reservationTypeList);
         return response;
     }
 

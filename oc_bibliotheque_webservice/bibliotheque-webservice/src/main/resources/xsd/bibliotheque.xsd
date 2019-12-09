@@ -596,7 +596,7 @@
         </xs:complexType>
     </xs:element>
 
-    <!-- ==== GET LISTE RESERVATION BY ouvrageId ==== -->
+    <!-- ==== GET LISTE RESERVATION BY OUVRAGE ID ==== -->
     <xs:element name="getListReservationByOuvrageIdRequest">
         <xs:complexType>
             <xs:sequence>
@@ -611,6 +611,23 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
+    <!-- ==== GET LISTE RESERVATION BY COMPTE ID ==== -->
+    <xs:element name="getListReservationByCompteIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="compteId" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getListReservationByCompteIdResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="reservationListByCompteId" type="tns:reservationType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
 
     <!-- ==== DELETE RESERVATION ==== -->
     <xs:element name="deleteReservationRequest">

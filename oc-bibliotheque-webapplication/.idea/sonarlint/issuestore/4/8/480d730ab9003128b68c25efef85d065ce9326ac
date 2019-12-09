@@ -1,0 +1,8 @@
+
+ysquid:S1488w"bImmediately return this expression instead of assigning it to the temporary variable "statusCode".(À¤öá
+psquid:S00117."QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“Í€¬8¼ıÒÔí-
+vsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰¤”½øÿÿÿÿ8µ³İí-
+vsquid:S00117®"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰¤”½øÿÿÿÿ8„õóÜí-
+isquid:S1192m"KDefine a constant instead of duplicating this literal "yyyy-MM-dd" 3 times.(ûú»ú8µ³İí-
+Wsquid:S3252r"@Use static access with "java.util.Calendar" for "WEEK_OF_MONTH".(†”äØ
+tsquid:UselessImportCheck	"IRemove this unused import 'org.omg.PortableInterceptor.SYSTEM_EXCEPTION'.(öØÁ8óàêÕí-

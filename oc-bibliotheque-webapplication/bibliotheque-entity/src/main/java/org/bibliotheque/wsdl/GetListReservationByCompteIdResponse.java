@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="photoType" type="{http://www.webservice.org/bibliotheque-ws}photoType" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="reservationListByCompteId" type="{http://www.webservice.org/bibliotheque-ws}reservationType" maxOccurs="unbounded"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -38,41 +38,41 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "photoType"
+    "reservationListByCompteId"
 })
-@XmlRootElement(name = "getAllPhotosResponse")
-public class GetAllPhotosResponse {
+@XmlRootElement(name = "getListReservationByCompteIdResponse")
+public class GetListReservationByCompteIdResponse {
 
     @XmlElement(required = true)
-    protected List<PhotoType> photoType;
+    protected List<ReservationType> reservationListByCompteId;
 
     /**
-     * Gets the value of the photoType property.
+     * Gets the value of the reservationListByCompteId property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the photoType property.
+     * This is why there is not a <CODE>set</CODE> method for the reservationListByCompteId property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getPhotoType().add(newItem);
+     *    getReservationListByCompteId().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link PhotoType }
+     * {@link ReservationType }
      * 
      * 
      */
-    public List<PhotoType> getPhotoType() {
-        if (photoType == null) {
-            photoType = new ArrayList<PhotoType>();
+    public List<ReservationType> getReservationListByCompteId() {
+        if (reservationListByCompteId == null) {
+            reservationListByCompteId = new ArrayList<ReservationType>();
         }
-        return this.photoType;
+        return this.reservationListByCompteId;
     }
 
 }
