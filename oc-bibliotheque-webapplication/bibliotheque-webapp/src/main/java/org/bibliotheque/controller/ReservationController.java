@@ -1,5 +1,6 @@
 package org.bibliotheque.controller;
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.bibliotheque.security.entity.Users;
 import org.bibliotheque.service.EmpruntService;
 import org.bibliotheque.service.OuvrageService;
@@ -31,7 +32,9 @@ public class ReservationController {
     private EmpruntService empruntService;
 
     @GetMapping (value = "/reservation")
-    public String reservation( Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId) throws ParseException {
+    public String reservation(HttpSession session, Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId) throws ParseException {
+
+        Users user = (Users) session.getAttribute("user");
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         model.addAttribute("dateFormat", dateFormat);
@@ -46,10 +49,27 @@ public class ReservationController {
 
         List<ReservationType> reservationTypeList = reservationService.reservationTypeListByOuvrageId(ouvrageId);
 
+        Boolean resaDejaEnCours = new Boolean(true);
+        Boolean dejaEmprunter = new Boolean(true);
+
+        for (ReservationType reservationType : reservationTypeList) {
+            if (reservationType.getCompteId() == user.getUserId()) {
+                resaDejaEnCours = false;
+            }
+        }
+
+        for (EmpruntType empruntType : empruntTypeList) {
+            if (empruntType.getCompteId() == user.getUserId()) {
+                dejaEmprunter = false;
+            }
+        }
+
         model.addAttribute("ouvrage", ouvrageType);
         model.addAttribute("reservationList", reservationTypeList);
         model.addAttribute("dateRetour", empruntTypeList.get(0).getDateFin());
         model.addAttribute("compteurJour", jourRestantEmprunt.get(0));
+        model.addAttribute("resaDejaEnCours", resaDejaEnCours);
+        model.addAttribute("dejaEmprunter", dejaEmprunter);
 
         return "reservation/reservation";
     }
@@ -102,4 +122,14 @@ public class ReservationController {
 
         return "compte/resaDetailCompte";
     }
+
+    @GetMapping(value = "addReservation")
+    public String addReservation(Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId) {
+        System.out.println(ouvrageId);
+
+        return null;
+
+    }
+
+
 }

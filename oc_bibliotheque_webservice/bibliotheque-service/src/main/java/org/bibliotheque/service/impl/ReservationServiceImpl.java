@@ -53,4 +53,14 @@ public class ReservationServiceImpl implements ReservationService {
         this.reservationRepository.findAllByCompteId(compteId).forEach(e -> reservationEntities.add(e));
         return reservationEntities;
     }
+
+    @Override
+    public ReservationEntity addReservation(ReservationEntity reservationEntity) {
+        try {
+            return this.reservationRepository.save(reservationEntity);
+        } catch (Exception pEX) {
+            pEX.printStackTrace();
+            return null;
+        }
+    }
 }

@@ -1,3 +1,2 @@
 
-msquid:UselessImportCheck"BRemove this unused import 'org.bibliotheque.entity.EmpruntEntity'.(Ş‚8È§äÒí-
-Gsquid:S1125w")Remove the literal "false" boolean value.(ûÅŸ8›¿ªí-
+Hsquid:S1125“")Remove the literal "false" boolean value.(ûÅŸ8›¿ªí-

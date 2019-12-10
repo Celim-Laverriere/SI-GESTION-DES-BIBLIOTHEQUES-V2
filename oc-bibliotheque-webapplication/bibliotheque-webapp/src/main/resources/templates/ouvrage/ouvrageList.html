@@ -40,8 +40,14 @@
                                         </p>
                                     </th:block>
 
+                                    <th:block th:if="${ouvrageListDispo.getLivres().size() >  0}">
                                     <p style="text-align: center" th:text="'Nombre de livre(s) disponible(s) : '
                                         + ${ouvrageListDispo.getLivres().size()}"></p>
+                                    </th:block>
+                                    <th:block th:if="${ouvrageListDispo.getLivres().size() ==  0}">
+                                        <p style="text-align: center" >Aucun livre pour cet ouvrage n'est disponible !</p>
+                                    </th:block>
+
 
                                     <p style="text-align: center">
                                         <a class="btn btn-light" href="#" th:href="@{/ouvrage(ouvrageId=${ouvrageListDispo.getId()})}">Afficher détail</a>

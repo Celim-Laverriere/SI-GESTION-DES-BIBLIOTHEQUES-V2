@@ -15,4 +15,6 @@ public interface ReservationService {
     List<ReservationEntity> getListReservationByCompteId(Integer compteId);
 
     boolean deleteReservaion(Integer id);
+
+    ReservationEntity addReservation(ReservationEntity reservationEntity);
 }

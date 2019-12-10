@@ -645,6 +645,23 @@
         </xs:complexType>
     </xs:element>
 
+    <!-- ==== ADD RESERVATION ==== -->
+    <xs:element name="addReservationRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="reservationType" type="tns:reservationType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="addReservationResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+                <xs:element name="reservationType" type="tns:reservationType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
 </xs:schema>
 
 

@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import org.bibliotheque.entity.ReservationEntity;
 import org.bibliotheque.service.contract.EmpruntService;
 import org.bibliotheque.service.contract.ReservationService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -151,6 +152,31 @@ public class ReservationEndpoint {
             serviceStatus.setMessage("Content Deleted Successfully");
         }
 
+        response.setServiceStatus(serviceStatus);
+        return response;
+    }
+
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "addReservationRequest")
+    @ResponsePayload
+    public AddReservationResponse addReservationResponse(@RequestPayload  AddReservationRequest request){
+        AddReservationResponse response = new AddReservationResponse();
+        ReservationType reservationType = new ReservationType();
+        ReservationEntity reservationEntity = new ReservationEntity();
+        ServiceStatus serviceStatus = new ServiceStatus();
+
+        BeanUtils.copyProperties(request.getReservationType(), reservationEntity);
+        ReservationEntity savedReservationEntity = service.addReservation(reservationEntity);
+
+        if (savedReservationEntity == null) {
+            serviceStatus.setStatusCode("CONFLICT");
+            serviceStatus.setMessage("Exception while adding Entity");
+        } else {
+            BeanUtils.copyProperties(savedReservationEntity, reservationType);
+            serviceStatus.setStatusCode("SUCCESS");
+            serviceStatus.setMessage("Content Added Successfully");
+        }
+
+        response.setReservationType(reservationType);
         response.setServiceStatus(serviceStatus);
         return response;
     }

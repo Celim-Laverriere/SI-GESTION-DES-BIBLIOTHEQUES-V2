@@ -43,3 +43,5 @@ Sbibliotheque-webservice/src/main/java/org/bibliotheque/BibliothequeApplication.
 Xbibliotheque-repository/src/main/java/org/bibliotheque/repository/OuvrageRepository.java,c\6\c60366e82c6425f97a109faeecf540fabca07d4d
 †
 Vbibliotheque-repository/src/main/java/org/bibliotheque/repository/LivreRepository.java,1\1\110f93a34c9d808df082ef2b6cfbf872bcb3c81c
+{
+Kbibliotheque-entity/src/main/java/org/bibliotheque/entity/CompteEntity.java,c\0\c0d0f01919ba42861d3d2eaea3821602b511e0f3

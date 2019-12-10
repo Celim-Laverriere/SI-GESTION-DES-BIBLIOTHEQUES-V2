@@ -1,0 +1,11 @@
+
+[
+squid:S106y"9Replace this use of System.out or System.err by a logger.(á‰ËÜÿÿÿÿÿ8Ğ°‹Úî-
+wsquid:UselessImportCheck"MRemove this unused import 'com.sun.org.apache.xpath.internal.operations.Mod'.(ÇóÃ8èş‹ÿî-
+nsquid:S1192("KDefine a constant instead of duplicating this literal "dateFormat" 3 times.(îóÔÕüÿÿÿÿ8ÏÏ®Øî-
+Dsquid:S21294"!Remove this "Boolean" constructor(ˆ¥›Ñûÿÿÿÿ8áÍÖÿî-
+\
+squid:S106€"9Replace this use of System.out or System.err by a logger.(á‰ËÜÿÿÿÿÿ8¨¸Œÿî-
+Rsquid:S1191"5Use classes from the Java API instead of Sun classes.(ÇóÃ8èş‹ÿî-
+?squid:S21295"!Remove this "Boolean" constructor(´Ÿóö8¿Êë€ï-
+isquid:S1192'"KDefine a constant instead of duplicating this literal "yyyy-MM-dd" 3 times.(ûú»ú8ÏÏ®Øî-

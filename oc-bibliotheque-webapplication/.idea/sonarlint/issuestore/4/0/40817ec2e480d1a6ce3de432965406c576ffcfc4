@@ -1,4 +1,4 @@
 
 Gsquid:S1905")Remove this unnecessary cast to "Logger".(уІЂп8ѕиЏям-
 \squid:S2387">"logger" is the name of a field in "WebServiceGatewaySupport".(уІЂп8≠гЃём-
-psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ц÷≈с8дЌЃям-
+psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ц÷≈с8дЌЃям-

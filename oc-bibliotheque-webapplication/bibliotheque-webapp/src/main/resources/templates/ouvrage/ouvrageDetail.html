@@ -46,16 +46,50 @@
                         <p th:text="'Genre : ' + ${ouvrageDetail.getGenre()}"></p>
                         <p th:text="'EAN : ' + ${ouvrageDetail.getRef()}"></p>
                         <hr/>
+
                         <h3>Livre disponible en bibliotheque</h3>
-                        <p ></p>
-                        <p>Pour cette ouvrage <span th:text="${#arrays.length(livreTypeListDispo)} + '/'
+                        <p></p>
+                        <th:block th:if="${livreTypeListDispo.size() > 0}">
+                            <p>Pour cette ouvrage <span th:text="${#arrays.length(livreTypeListDispo)} + '/'
                         + ${(ouvrageDetail.getLivres().size())}"></span> livre(s) sont disponible(s)</p>
-                        <th:block th:each="livre : ${livreTypeListDispo}">
-                            <p th:text="'Référence du livre : ' + ${livre.getRefBibliotheque()}"></p>
+                            <th:block th:each="livre : ${livreTypeListDispo}">
+                                <p th:text="'Référence du livre : ' + ${livre.getRefBibliotheque()}"></p>
+                            </th:block>
+                        </th:block>
+                        <th:block th:if="${livreTypeListDispo.size() == 0}">
+                            <p>Aucun livre n'est actuellement disponible pour cet ouvrage !</p>
                         </th:block>
                         <hr/>
+
                         <h3>Réservation</h3>
-                        <p></p>
+
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <td style="vertical-align: middle" >
+                                    <th:block th:if="${livreTypeListDispo.size() == 0
+                                        && ouvrageDetail.getLivres().size() * 2 > reservationTypeList.size()}">
+                                        <p th:text="'Cette ouvrage ne sera pas disponible avant le '
+                                        + ${dateRetour.getDay()}  + '/' + ${dateRetour.getMonth()} + '/'
+                                        + ${dateRetour.getYear()}">
+                                        </p>
+
+                                        <p>Vous avez la possiblitées de réserver l'ouvrage !</p>
+                                        <p th:text="'Il reste encore ' + ${ouvrageDetail.getLivres().size() * 2 - reservationTypeList.size()}
+                                        + ' place(s) dans la liste d\'attente.'">
+                                        </p>
+                                    </th:block>
+                                </td>
+
+                                <td style="vertical-align: middle" >
+                                    <p style="text-align: center">
+                                        <a class="btn btn-success" href="#" th:href="@{/reservation(ouvrageId=${ouvrageDetail.getId()})}">Réservation</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
                     </div>
                 </div>
             </div>

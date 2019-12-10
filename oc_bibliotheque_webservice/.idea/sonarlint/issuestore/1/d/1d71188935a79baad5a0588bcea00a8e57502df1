@@ -1,9 +1,9 @@
 
+Jsquid:S1612U",Replace this lambda with a method reference.(»¼8¹ÍÒí-
+Hsquid:S1612"",Replace this lambda with a method reference.(¨ãØ¼ûÿÿÿÿ
+Osquid:S1612Q",Replace this lambda with a method reference.(ÙÙ«úÿÿÿÿ8áŠÒí-
 ?squid:S11486"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
 ?squid:S1148A"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
-?squid:S1148+"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
-Osquid:S1612Q",Replace this lambda with a method reference.(ÙÙ«úÿÿÿÿ8áŠÒí-
-Jsquid:S1612U",Replace this lambda with a method reference.(»¼8¹ÍÒí-
 Csquid:S1612J",Replace this lambda with a method reference.(ÉşşÏ
 Usquid:S3655"7Call "Optional#isPresent()" before accessing the value.(‡£Œ8—İ™ªí-
-Hsquid:S1612"",Replace this lambda with a method reference.(¨ãØ¼ûÿÿÿÿ
+?squid:S1148+"#Use a logger to log this exception.(°İä‰ıÿÿÿÿ
